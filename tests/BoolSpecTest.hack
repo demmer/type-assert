@@ -26,6 +26,9 @@ final class BoolSpecTest extends TypeSpecTest<bool> {
       tuple(true, true),
       tuple(0, false),
       tuple(1, true),
+      tuple('false', false),
+      tuple('true', true),
+      tuple('', false),
     ];
   }
 
@@ -35,8 +38,6 @@ final class BoolSpecTest extends TypeSpecTest<bool> {
       tuple(null),
       tuple(23),
       tuple(-1),
-      tuple('true'),
-      tuple('false'),
     ];
   }
 

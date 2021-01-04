@@ -25,6 +25,15 @@ final class BoolSpec extends TypeSpec<bool> {
     if ($value === 1) {
       return true;
     }
+    if ($value === "true") {
+      return true;
+    }
+    if ($value === "false") {
+      return false;
+    }
+    if ($value === "") {
+      return false;
+    }
     throw TypeCoercionException::withValue($this->getTrace(), 'bool', $value);
   }
 
